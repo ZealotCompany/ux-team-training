@@ -1,4 +1,6 @@
-﻿angular.module('app').controller('mvDriversCtrl', function ($scope) {
+﻿angular.module('app').controller('mvDriversCtrl',
+    function ($scope) {
 
-    $scope.temp = "Hello World";
-});
+        $scope.temp = "Hello World";
+
+    });

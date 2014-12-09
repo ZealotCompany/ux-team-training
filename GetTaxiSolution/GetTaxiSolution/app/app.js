@@ -8,9 +8,11 @@ angular.module('app').config(['$routeProvider', '$locationProvider',
             requireBase: false
         });
 
+        var rootPath = '/app/components';
+
         $routeProvider.
             when('/drivers', {
-                templateUrl: '/app/components/drivers/driver-list.html',
+                templateUrl: rootPath + '/drivers/driver-list.html',
                 controller: 'mvDriversCtrl'
             })
 
