@@ -163,11 +163,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DriversController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\DriversRepository.cs" />
     <Compile Include="Data\IDriversRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Helpers.cs" />
+    <Compile Include="Helpers\Enumerations.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\TaxiAppDbContext.cs" />
+    <Compile Include="Models\TaxiDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -271,7 +277,6 @@
     <Folder Include="app\shared\" />
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

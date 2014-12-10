@@ -12,7 +12,7 @@ namespace GetTaxiSolution.Data
             return new List<object>() { 
             
                 new {
-                    name = "Anar",
+                    name = "Anara",
                     exp = 15
                 },
                 new {
