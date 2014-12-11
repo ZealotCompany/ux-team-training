@@ -165,16 +165,21 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DriversController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Data\DriversRepository.cs" />
     <Compile Include="Data\IDriversRepository.cs" />
+    <Compile Include="Data\IOrdersRepository.cs" />
+    <Compile Include="Data\OrdersRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="Helpers\Enumerations.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Bid.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\TaxiAppDbContext.cs" />
-    <Compile Include="Models\TaxiDriver.cs" />
+    <Compile Include="Models\Driver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -436,6 +441,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\BuiltinJs\_references.js" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <Content Include="Views\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\controller\" />

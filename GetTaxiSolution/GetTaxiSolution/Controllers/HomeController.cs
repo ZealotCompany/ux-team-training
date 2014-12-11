@@ -17,15 +17,15 @@ namespace GetTaxiSolution.Controllers
         private TaxiAppDbContext db = new TaxiAppDbContext();
 
         // GET api/Home
-        public IEnumerable<TaxiDriver> GetTaxiDrivers()
+        public IEnumerable<Driver> GetTaxiDrivers()
         {
-            return db.TaxiDrivers.AsEnumerable();
+            return db.Drivers.AsEnumerable();
         }
 
         // GET api/Home/5
-        public TaxiDriver GetTaxiDriver(int id)
+        public Driver GetTaxiDriver(int id)
         {
-            TaxiDriver taxidriver = db.TaxiDrivers.Find(id);
+            Driver taxidriver = db.Drivers.Find(id);
             if (taxidriver == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -35,14 +35,14 @@ namespace GetTaxiSolution.Controllers
         }
 
         // PUT api/Home/5
-        public HttpResponseMessage PutTaxiDriver(int id, TaxiDriver taxidriver)
+        public HttpResponseMessage PutTaxiDriver(int id, Driver taxidriver)
         {
             if (!ModelState.IsValid)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
 
-            if (id != taxidriver.TaxiDriverID)
+            if (id != taxidriver.DriverID)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
@@ -62,15 +62,15 @@ namespace GetTaxiSolution.Controllers
         }
 
         // POST api/Home
-        public HttpResponseMessage PostTaxiDriver(TaxiDriver taxidriver)
+        public HttpResponseMessage PostTaxiDriver(Driver taxidriver)
         {
             if (ModelState.IsValid)
             {
-                db.TaxiDrivers.Add(taxidriver);
+                db.Drivers.Add(taxidriver);
                 db.SaveChanges();
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, taxidriver);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = taxidriver.TaxiDriverID }));
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = taxidriver.DriverID}));
                 return response;
             }
             else
@@ -82,13 +82,13 @@ namespace GetTaxiSolution.Controllers
         // DELETE api/Home/5
         public HttpResponseMessage DeleteTaxiDriver(int id)
         {
-            TaxiDriver taxidriver = db.TaxiDrivers.Find(id);
+            Driver taxidriver = db.Drivers.Find(id);
             if (taxidriver == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.TaxiDrivers.Remove(taxidriver);
+            db.Drivers.Remove(taxidriver);
 
             try
             {

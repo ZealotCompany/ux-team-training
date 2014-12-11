@@ -11,6 +11,7 @@ namespace GetTaxiSolution.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using WebApiContrib.IoC.Ninject;
+    using GetTaxiSolution.Models;
 
     public static class NinjectWebCommon 
     {
@@ -63,7 +64,9 @@ namespace GetTaxiSolution.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<TaxiAppDbContext>().To<TaxiAppDbContext>().InRequestScope();
             kernel.Bind<IDriversRepository>().To<DriversRepository>().InRequestScope();
+            kernel.Bind<IOrdersRepository>().To<OrdersRepository>().InRequestScope();
         }        
     }
 }
