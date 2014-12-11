@@ -12,6 +12,9 @@ using GetTaxiSolution.Models;
 
 namespace GetTaxiSolution.Controllers
 {
+    /// <summary>
+    /// Controller for TEST purposes !!
+    /// </summary>
     public class HomeController : ApiController
     {
         private TaxiAppDbContext db = new TaxiAppDbContext();
