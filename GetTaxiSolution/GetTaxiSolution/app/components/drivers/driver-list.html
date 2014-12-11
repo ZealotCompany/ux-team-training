@@ -1,3 +1,38 @@
-﻿<div ng-controller="mvDriversCtrl"> 
-    <h2>{{temp}}</h2>
+﻿<div class="container">
+    <div ng-repeat="driver in drivers">
+        <div class="col-md-4" ng-show="isOverEighteen(driver)">
+            <div class="whity content">
+                <!-- Content should be encloased inside div with the class "posts" -->
+                <div class="posts">
+                    <!-- Each entry should be enclosed inside div with the class "entry" -->
+                    <div class="entry">
+                        <div class="padd">
+                            <!-- Entry title -->
+                            <h2><a href="#">{{driver.firsName}} {{driver.lastName}}</a></h2>
+                        </div>
+                        <!-- Staffs -->
+                        <div class="about-new">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <!-- Staff #1 -->
+                                    <div class="staff">
+                                        <!-- Staff Picture -->
+                                        <div class="author taxiDriver">
+                                            <img src="Content/Template/img/staff/1.jpg" alt="" />
+                                        </div>
+                                        <!-- Small para about staff -->
+                                        <div class="author driverInfo">
+                                            <p>Age: {{driver.age}}</p>
+                                            <p>Gender: {{driver.gender}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

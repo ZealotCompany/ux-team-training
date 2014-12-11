@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GetTaxiSolution.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,17 +12,26 @@ namespace GetTaxiSolution.Data
         {
             return new List<object>() { 
             
-                new {
-                    name = "Anara",
-                    exp = 15
+                new Driver() {
+                    DriverID = 1,
+                    FirsName = "Anar",
+                    LastName = "Azadaliyev",
+                    BirthDate = "27-09-1986",
+                    Gender = Gender.MALE
                 },
-                new {
-                    name = "Rufet",
-                    exp = 10
+                new Driver() {
+                    DriverID = 2,
+                    FirsName = "Azer",
+                    LastName = "Safarov",
+                    BirthDate = "22-02-1990",
+                    Gender = Gender.MALE
                 },
-                new {
-                    name = "Orxan",
-                    exp = 5
+                new Driver() {
+                    DriverID = 3,
+                    FirsName = "Rufet",
+                    LastName = "Isayev",
+                    BirthDate = "21-11-1993",
+                    Gender = Gender.MALE
                 }
             };
         }
