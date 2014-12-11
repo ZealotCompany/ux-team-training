@@ -9,6 +9,6 @@ namespace GetTaxiSolution.Data
 {
     public interface IDriversRepository
     {
-        IEnumerable<Driver> GetDrivers();
+        IQueryable<Driver> GetDrivers();
     }
 }

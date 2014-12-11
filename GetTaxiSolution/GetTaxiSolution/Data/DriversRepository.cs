@@ -1,3 +1,4 @@
+﻿using GetTaxiSolution.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace GetTaxiSolution.Data
             _dbContext = dbContext;
         }
 
-        public IEnumerable<Driver> GetDrivers()
+        public IQueryable<Driver> GetDrivers()
         {
-            return _dbContext.Drivers.ToList();
+            return _dbContext.Drivers;
         }
     }
 }
