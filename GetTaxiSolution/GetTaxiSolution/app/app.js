@@ -14,6 +14,9 @@ angular.module('app').config(['$routeProvider', '$locationProvider',
             when('/drivers', {
                 templateUrl: rootPath + '/drivers/driver-list.html',
                 controller: 'mvDriversCtrl'
+            }).
+            when('/lala', {
+                templateUrl: rootPath + '/drivers/driver-list.html',
+                controller: 'mvDriversCtrl'
             })
-
     }]);

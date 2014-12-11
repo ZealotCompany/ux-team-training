@@ -1,6 +1,17 @@
 ﻿angular.module('app').controller('mvDriversCtrl',
-    function ($scope) {
+    function ($scope, mvDriver) {
 
-        $scope.temp = "Hello World";
+        mvDriver.query(function (collection) {
+            $scope.drivers = collection;
+        });
+
+        $scope.isOverEighteen = function (driver) {
+            if (driver.age < 18) {
+                return false;
+            }
+
+            return true;
+        }
+
 
     });
