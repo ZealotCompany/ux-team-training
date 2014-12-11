@@ -22,5 +22,9 @@ namespace GetTaxiSolution.Models
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Bid> Bids { get; set; }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Rank> Ranks { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GetTaxiSolution.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace GetTaxiSolution.Data
 {
     public interface IDriversRepository
     {
-        IEnumerable<object> GetDrivers();
+        IEnumerable<Driver> GetDrivers();
     }
 }

@@ -10,4 +10,17 @@ namespace GetTaxiSolution.Models
         MALE,
         FEMALE
     }
+    public enum CarBrand
+    {
+        BMW,
+        MERCEDES,
+        VOLKSWAGEN
+    }
+    public enum CarType
+    {
+        SEDAN,
+        OFFROADER,
+        JEAP,
+        UNIVERSAL
+    }
 }

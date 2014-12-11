@@ -2,28 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using GetTaxiSolution;
+using GetTaxiSolution.Models;
 
 namespace GetTaxiSolution.Data
 {
     public class DriversRepository : IDriversRepository
     {
-        public IEnumerable<object> GetDrivers()
+        private TaxiAppDbContext _dbContext;
+        public DriversRepository(TaxiAppDbContext dbContext)
         {
-            return new List<object>() { 
-            
-                new {
-                    name = "Anara",
-                    exp = 15
-                },
-                new {
-                    name = "Rufet",
-                    exp = 10
-                },
-                new {
-                    name = "Orxan",
-                    exp = 5
-                }
-            };
+            _dbContext = dbContext;
+        }
+
+        public IEnumerable<Driver> GetDrivers()
+        {
+            return _dbContext.Drivers.ToList();
         }
     }
 }
