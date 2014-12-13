@@ -406,7 +406,6 @@
     <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\BuiltinJs\jquery-1.8.2.intellisense.js" />
     <Content Include="Default.html" />
-    <Content Include="index.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
@@ -456,10 +455,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\BuiltinJs\_references.js" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
-    <Content Include="Views\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\controller\" />
     <Folder Include="app\shared\" />
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
